@@ -1,6 +1,20 @@
 def largest_product(grid, n):
-    # Your solution here!
-    pass
+    max_product = None
+
+    num_rows = len(grid)
+    num_cols = len(grid[0])
+
+    if max_product is None or product > max_product:
+        max_product = product
+
+
+    for row in range(num_rows):
+        for col in range(num_cols - n + 1): 
+            product = 1
+            for i in range(n):
+                product *= grid[row][col + i]
+            if product > max_product:
+                max_product = product
 
 
 grid = [
